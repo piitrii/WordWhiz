@@ -1,7 +1,7 @@
 from ImportCsv import lataa_sanasto
 from AskWords import kysy_sanoja
 
-def kaynnista_peli():
+def main():
     print("Tervetuloa sanapeliin!")
     print("Valitse kappale:")
     for i in range(1, 6):
@@ -11,3 +11,5 @@ def kaynnista_peli():
     sanasto = lataa_sanasto(valinta)
     kysy_sanoja(sanasto)
 
+if __name__ == "__main__":
+    main()
