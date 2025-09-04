@@ -1,31 +1,13 @@
-import random
+from ImportCsv import lataa_sanasto
+from AskWords import kysy_sanoja
 
-sanasto = {
-    "koira": "dog",
-    "kissa": "cat",
-    "auto": "car",
-    "pöytä": "table",
-    "omena": "apple",
-    "koulu": "school",
-    "kirja": "book",
-    "talvi": "winter",
-    "kesä": "summer",
-    "vesi": "water"
-}
-
-def kysy_sanoja(maara=10):
-    pisteet = 0
-    kysymykset = random.sample(list(sanasto.items()), maara)
-
-    for suomi, englanti in kysymykset:
-        vastaus = input(f"Mikä on englanniksi: {suomi}? ").strip().lower()
-        if vastaus == englanti:
-            print("✅ Oikein!")
-            pisteet += 1
-        else:
-            print(f"❌ Väärin. Oikea vastaus on: {englanti}")
+def kaynnista_peli():
+    print("Tervetuloa sanapeliin!")
+    print("Valitse kappale:")
+    for i in range(1, 6):
+        print(f"{i}. Kappale {i}")
+    valinta = int(input("Valintasi: "))
     
-    print(f"\nSait {pisteet}/{maara} oikein.")
+    sanasto = lataa_sanasto(valinta)
+    kysy_sanoja(sanasto)
 
-# Käynnistetään peli
-kysy_sanoja()
