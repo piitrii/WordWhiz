@@ -11,7 +11,7 @@ mode to use.
 
 **ImportCsv.py** is for importing CSV files containing the word lists.
 
-**Askwords.py** asks the translations about the imported word list. It 
+**AskWords.py** asks the translations about the imported word list. It 
 also gives feedback on whether the answer was correct or not and calculates 
 correct answers.
 

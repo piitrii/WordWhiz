@@ -16,13 +16,15 @@
 
 from ImportCsv import lataa_sanasto
 from AskWords import kysy_sanoja
+from PickWordsFromText import pick_words_interactive
 
 # Jos ohjelmaa ajaa terminaalin kautta, niin tulee ensin mennä WordWhiz-kansioon, jotta ohjelma löytää ennakkoon muodostetut sanastot Chapter_1.csv jne. 
 def main():
     print("Tervetuloa sanapeliin!")
     print("Valitse vaihtoehto:")
     print("1–5: Käytä valmista sanastoa kappaleen syöttämällä haluamasi kappaleen numero")
-    print("T: Anna oma CSV-tiedosto, jonka tekstistä sanat poimitaan (esim. sanakoe.csv)")
+    print("t: Anna oma CSV-tiedosto, jonka tekstistä sanat poimitaan (esim. sanakoe.csv)")
+    print("p: Liitä oma teksti, josta sanat poimitaan ja tallennetaan csv-muodossa")
 
     valinta = input("Valintasi: ").strip()
 
@@ -33,6 +35,11 @@ def main():
         except FileNotFoundError:
             print(f"Tiedostoa '{tiedostonimi}' ei löytynyt.")
             return
+    
+    elif valinta.lower() == "p":
+            pick_words_interactive()
+            return
+    
     else:
         try:
             num = int(valinta)
