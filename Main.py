@@ -17,11 +17,12 @@
 from ImportCsv import lataa_sanasto
 from AskWords import kysy_sanoja
 
+# Jos ohjelmaa ajaa terminaalin kautta, niin tulee ensin mennä WordWhiz-kansioon, jotta ohjelma löytää ennakkoon muodostetut sanastot Chapter_1.csv jne. 
 def main():
     print("Tervetuloa sanapeliin!")
     print("Valitse vaihtoehto:")
-    print("1–5: Käytä valmista kappalesanastoa")
-    print("T: Anna oma CSV-tiedosto (esim. sanakoe.csv)")
+    print("1–5: Käytä valmista sanastoa kappaleen syöttämällä haluamasi kappaleen numero")
+    print("T: Anna oma CSV-tiedosto, jonka tekstistä sanat poimitaan (esim. sanakoe.csv)")
 
     valinta = input("Valintasi: ").strip()
 
