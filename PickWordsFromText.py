@@ -4,9 +4,6 @@ from google.genai import types
 
 client = genai.Client()
 
-# Teksti
-#sample_text = input("Anna teksti sanakoetta varten: ")
-
 # Funktio, joka hakee tärkeimmät sanat
 def get_keywords_from_text(text, num_words=10):
     prompt = f"""
@@ -50,15 +47,3 @@ def pick_words_interactive():
         print(f"{fin},{eng}")
     filename = input("\nAnna CSV-tiedoston nimi (ilman .csv-päätettä): ")
     save_to_csv(keywords, filename)
-
-# Suoritus
-#keywords = get_keywords_from_text(sample_text)
-
-# Tulosta ja tallenna
-#print("10 tärkeintä sanaa ja niiden suomennokset:")
-#for fin, eng in keywords:
-#    print(f"{fin},{eng}")
-
-# Kysy tiedoston nimi ja tallenna
-#filename = input("\nAnna CSV-tiedoston nimi (ilman .csv-päätettä): ")
-#save_to_csv(keywords, filename)

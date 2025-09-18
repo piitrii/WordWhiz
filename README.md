@@ -15,6 +15,7 @@ mode to use.
 also gives feedback on whether the answer was correct or not and calculates 
 correct answers.
 
-**PickWordsFromText.py** is a function that can be used as a separate program to 
-pick words from a given text, e.g. for creating your own vocabularies.
+**PickWordsFromText.py** is a script that can be used to 
+pick words from a given text, e.g. for creating your own vocabularies. Then 
+the word list is saved to csv.
 
