@@ -12,4 +12,7 @@ def kysy_sanoja(sanasto, maara=10):
         else:
             print(f"❌ Väärin. Oikea vastaus on: {englanti}")
     
-    print(f"\nSait {pisteet}/{maara} oikein.")
+    if pisteet < maara:
+        print(f"\nSait {pisteet}/{maara} oikein. Jatka harjoittelua :)")
+    else:
+        print(f"\nOlet saanut kaikki kysymykset oikein! Harjoittelu teki sinusta mestarin!")
