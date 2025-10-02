@@ -22,8 +22,8 @@ from PickWordsFromText import pick_words_interactive
 def main():
     print("Tervetuloa sanapeliin!")
     print("Valitse vaihtoehto:")
-    print("1–5: Käytä valmista sanastoa kappaleen syöttämällä haluamasi kappaleen numero")
-    print("t: Anna oma CSV-tiedosto, jonka tekstistä sanat poimitaan (esim. sanakoe.csv)")
+    print("1–5: Käytä valmista sanastoa syöttämällä haluamasi kappaleen numero")
+    print("t: Käytä valmista sanastoa syöttämällä haluamasi tiedoston nimi (esim. sanakoe.csv)")
     print("p: Liitä oma teksti, josta sanat poimitaan ja tallennetaan csv-muodossa")
 
     valinta = input("Valintasi: ").strip()

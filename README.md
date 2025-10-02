@@ -1,5 +1,5 @@
 # WordWhiz
-Help children (and parents) to learn vocabulary.
+Help children (and parents) to learn foreign vocabulary.
 
 This program can be used as a game-like tool for learning new words. 
 It is possible to use prepared word lists e.g. based on a textbook 
